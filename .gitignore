@@ -1,0 +1,22 @@
+# binaries
+*.dll
+*.so
+*.exe
+*.zip
+*.pyc
+*.pyd
+
+# third party libs
+customtkinter*
+jinja2*
+psutil*
+pyinstaller*
+importlib_metadata*
+
+# tcl/tk
+tcl/
+tk/
+tcl8/
+
+# user config
+*.kcpps
