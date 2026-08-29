@@ -29952,84 +29952,84 @@ Current version indicated by LITEVER below.
 		</div>
 	</div>
 
-	<div id="maincontainer" class="adaptivecontainer maincontainer">
+    <div id="maincontainer" class="adaptivecontainer maincontainer">
 		<div id="outerbodybg"></div>
-		<div id="topmenu" class="topmenu">
-			<div style="width: 100%;">
-				<button title="Main Menu Options" class="navtoggler mainnav" type="button" onclick="toggleTopNav()">
-					<span class="navbar-button-bar"></span>
-					<span class="navbar-button-bar"></span>
-					<span class="navbar-button-bar"></span>
-				</button>
-				<div class="navbar-collapse collapse" id="navbarNavDropdown">
-					<ul class="nav navbar-nav">
-						<li class="nav-item hidden" id="topbtn_admin">
-							<a class="nav-link mainnav" href="#" onclick="closeTopNav();display_admin_container()">Admin</a>
-						</li>
+        <div id="topmenu" class="topmenu">
+            <div style="width: 100%;">
+                <button title="主菜单选项" class="navtoggler mainnav" type="button" onclick="toggleTopNav()">
+                    <span class="navbar-button-bar"></span>
+                    <span class="navbar-button-bar"></span>
+                    <span class="navbar-button-bar"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarNavDropdown">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item hidden" id="topbtn_admin">
+                            <a class="nav-link mainnav" href="#" onclick="closeTopNav();display_admin_container()">管理员</a>
+                        </li>
 
-						<li class="nav-item hidden" id="topbtn_reconnect">
-							<a class="nav-link mainnav" href="#" onclick="closeTopNav();attempt_connect()">Reconnect</a>
-						</li>
+                        <li class="nav-item hidden" id="topbtn_reconnect">
+                            <a class="nav-link mainnav" href="#" onclick="closeTopNav();attempt_connect()">重新连接</a>
+                        </li>
 
-						<li class="nav-item hidden" id="topbtn_customendpt">
-							<a class="nav-link mainnav" href="#" onclick="closeTopNav();display_endpoint_container()">Select Endpoint</a>
-						</li>
+                        <li class="nav-item hidden" id="topbtn_customendpt">
+                            <a class="nav-link mainnav" href="#" onclick="closeTopNav();display_endpoint_container()">选择端点</a>
+                        </li>
 
-						<li class="nav-item hidden" id="topbtn_ai">
-							<a class="nav-link mainnav" href="#" onclick="closeTopNav();display_endpoint_container()">AI</a>
-						</li>
+                        <li class="nav-item hidden" id="topbtn_ai">
+                            <a class="nav-link mainnav" href="#" onclick="closeTopNav();display_endpoint_container()">AI</a>
+                        </li>
 
-						<li class="nav-item hidden" id="topbtn_newgame">
-							<a class="nav-link mainnav" href="#" onclick="closeTopNav();display_newgame()">New Session</a>
-						</li>
+                        <li class="nav-item hidden" id="topbtn_newgame">
+                            <a class="nav-link mainnav" href="#" onclick="closeTopNav();display_newgame()">新会话</a>
+                        </li>
 
-						<li class="nav-item hidden" id="topbtn_scenarios">
-							<a class="nav-link mainnav" href="#" onclick="closeTopNav();display_scenarios()">Scenarios</a>
-						</li>
-						<li class="nav-item hidden" id="topbtn_quickplay">
-							<a class="nav-link mainnav" href="#" onclick="closeTopNav();display_scenarios()">Quick Start</a>
-						</li>
+                        <li class="nav-item hidden" id="topbtn_scenarios">
+                            <a class="nav-link mainnav" href="#" onclick="closeTopNav();display_scenarios()">场景</a>
+                        </li>
+                        <li class="nav-item hidden" id="topbtn_quickplay">
+                            <a class="nav-link mainnav" href="#" onclick="closeTopNav();display_scenarios()">快速开始</a>
+                        </li>
 
-						<li class="nav-item hidden" id="topbtn_save_load">
-							<a id="tempfile" href="#" style="display:none;"></a>
-							<input type="file" id="loadfileinput" accept="*" onchange="load_file(event)" style="display:none;">
-							<a class="nav-link mainnav" href="#" onclick="closeTopNav();display_saveloadcontainer()">Save / Load</a>
-						</li>
-						<li class="nav-item hidden" id="topbtn_settings">
-							<a class="nav-link mainnav" href="#" id="btn_settings"
-								onclick="closeTopNav();display_settings()">Settings</a>
-						</li>
+                        <li class="nav-item hidden" id="topbtn_save_load">
+                            <a id="tempfile" href="#" style="display:none;"></a>
+                            <input type="file" id="loadfileinput" accept="*" onchange="load_file(event)" style="display:none;">
+                            <a class="nav-link mainnav" href="#" onclick="closeTopNav();display_saveloadcontainer()">保存 / 加载</a>
+                        </li>
+                        <li class="nav-item hidden" id="topbtn_settings">
+                            <a class="nav-link mainnav" href="#" id="btn_settings"
+                                onclick="closeTopNav();display_settings()">设置</a>
+                        </li>
 
-						<li class="nav-item hidden" id="topbtn_multiplayer_join">
-							<a class="nav-link mainnav" href="#" onclick="join_multiplayer()">Join Multiplayer</a>
-						</li>
-						<li class="nav-item hidden" id="topbtn_multiplayer_leave">
-							<a class="nav-link mainnav" href="#" onclick="leave_multiplayer()">Exit Multiplayer</a>
-						</li>
-					</ul>
-				</div>
+                        <li class="nav-item hidden" id="topbtn_multiplayer_join">
+                            <a class="nav-link mainnav" href="#" onclick="join_multiplayer()">加入多人</a>
+                        </li>
+                        <li class="nav-item hidden" id="topbtn_multiplayer_leave">
+                            <a class="nav-link mainnav" href="#" onclick="leave_multiplayer()">退出多人</a>
+                        </li>
+                    </ul>
+                </div>
 
-			</div>
-			<div id="connectstatusdiv">
-				<div id="connectstatus">Connecting</div>
-				<div class="hidden" style="font-size: 10px;" id="connectstatusmultiplayer"></div>
-				<div class="hidden color_orange" style="font-size: 10px;" id="connectstatusproxied">(Proxied)</div>
-			</div>
-		</div>
+            </div>
+            <div id="connectstatusdiv">
+                <div id="connectstatus">连接中</div>
+                <div class="hidden" style="font-size: 10px;" id="connectstatusmultiplayer"></div>
+                <div class="hidden color_orange" style="font-size: 10px;" id="connectstatusproxied">（已代理）</div>
+            </div>
+        </div>
 
 
-		<div id="normalinterface" class="pagebox">
-		<div id="maineditbody" class="viewport_height">
-			<div class="gamescreenbgnormal viewport_height" id="gamescreen">
-				<span id="gametext" contenteditable="false" onclick="click_gametext()" onblur="merge_edit_field()">
-					<p id="tempgtloadtxt">Loading...</p>
-					<noscript><style>#tempgtloadtxt { display: none; } #gametext { white-space: normal!important; }</style><p>Sorry, KoboldAI Lite requires Javascript to function.</p></noscript>
-				</span>
-				<div class="hidden" id="wordsearch_panel" style="flex:250px">
+        <div id="normalinterface" class="pagebox">
+            <div id="maineditbody" class="viewport_height">
+                <div class="gamescreenbgnormal viewport_height" id="gamescreen">
+                    <span id="gametext" contenteditable="false" onclick="click_gametext()" onblur="merge_edit_field()">
+                        <p id="tempgtloadtxt">加载中...</p>
+                        <noscript><style>#tempgtloadtxt { display: none; } #gametext { white-space: normal!important; }</style><p>抱歉，KoboldAI Lite 需要 Javascript 才能运行。</p></noscript>
+                    </span>
+                    <div class="hidden" id="wordsearch_panel" style="flex:250px">
 					<div style="display:flex; padding:6px">
 					<input title="Word Search Input" class="form-control menuinput_inline" style="width: calc(100% - 34px); margin-right:2px;" type="text" placeholder="WordSearch" value="" onkeyup="trigger_wordsearch_candidates_key();" id="wordsearch_input">
 					<button title="Perform WordSearch" type="button" class="btn btn-primary" style="width:30px;padding:4px 4px;" onclick="trigger_wordsearch_candidates();">🔎</button>
-					</div>
+                    </div>
 					<div style="display:flex; padding:6px">
 					<p style="margin-right:6px">Sort: </p>
 					<select title="Sort" style="padding:2px; font-size:14px; height:24px; width: calc(100% - 50px);" class="form-control" id="wordsearch_sort">
@@ -30039,132 +30039,131 @@ Current version indicated by LITEVER below.
 					</div>
 					<div id="wordsearch_results" style="height:calc(100% - 98px);overflow-y: auto;"></div>
 				</div>
-			</div>
-		</div>
+                </div>
+            </div>
 
-		<div id="actionmenu" class="flex" style="margin-top: 3px;">
-			<div id="actionmenuitems">
-				<button type="button" class="btn actbtn btn-primary mainnav" id="btn_actmem" onclick="btn_memory()">Context</button>
-				<button type="button" class="btn actbtn btn-primary mainnav" id="btn_actundo" onpointerdown="btn_back_longpress_start()" onpointerleave="btn_back_longpress_end()" onpointerup="btn_back_longpress_end()" onclick="btn_back()">Undo</button>
-				<button type="button" class="btn actbtn btn-primary mainnav" id="btn_actredo" onpointerdown="btn_redo_longpress_start()" onpointerleave="btn_redo_longpress_end()" onpointerup="btn_redo_longpress_end()" onclick="btn_redo()">Redo</button>
-				<button type="button" class="btn actbtn btn-primary mainnav" id="btn_actretry" onclick="btn_retry()">Retry</button>
-				<button type="button" class="btn actbtn btn-primary mainnav" id="btn_actbranch" onclick="btn_branch(this)">Branch</button>
-				<button type="button" class="btn actbtn btn-primary mainnav" id="btn_addmedia" onclick="add_media_btn_menu()">Add File</button>
-				<button type="button" class="btn actbtn btn-primary mainnav slim btnicon-websearch hidden" id="btn_togglesearch" onclick="toggle_websearch()">&nbsp;</button>
-			</div>
-			<div class="borderbox flex push-right">
-				<input type="checkbox" id="allowediting" class="mainnav" onclick="toggle_editable()">
-				<div class="box-label"><label for="allowediting">Allow Editing</label></div>
-			</div>
-		</div>
-		<div>
-			<div id="inputrow">
-				<div style="position: relative; padding-right: 4px;">
-					<button title="Toggle Adventure Mode" type="button" class="btn btn-primary hidden mainnav" style="line-height: 1.2; padding: 2px 6px;" id="btnmode_adventure" onclick="btn_adventure_mode()">
-						<img id="adventure_mode_img" class="input_story">
-						<br><b id="adventure_mode_txt" style="font-size: 10px;">Story</b>
-					</button>
-					<button title="Show Groupchat Selection" type="button" class="btn btn-primary mainnav actbtnbtm" style="line-height: 1.2; padding: 2px 6px;" id="btnmode_chat" onclick="show_groupchat_select()">
-						<img class="input_chat">
-						<br><b style="font-size: 10px;">Group</b>
-					</button>
-				</div>
-				<div id="input_text_holder" style="position: relative; padding-right: 4px;">
-					<textarea title="User Input" style="min-height: 46px; height: 80px;" class="form-control menuinput_multiline mainnav actbtnbtm" id="input_text" oninput="update_submit_button()" onkeypress="return handle_typing(event)" onpaste="return img_paste_event(event)" placeholder="Enter text here"></textarea>
-					<span id="token-budget" class="token-budget"></span>
-				</div>
-				<div style="position: relative; padding-right: 2px;">
-					<button type="button" class="btn btn-primary wait mainnav actbtnbtm" id="btnsend" disabled
-						onclick="submit_generation_button(false)" onpointerdown="ptt_start()" onpointerup="ptt_end()">Loading</button>
-						<a href="#" id="abortgen" class="hidden bg_black mainnav" style="text-align: center;color: #ffaaaa;" onclick="abort_generation()"><b style="display: block;">[ABORT]</b></a>
-						<span id="searchingtxt" class="hidden bg_black mainnav" style="text-align: center;color: #49a8e4; font-size: 9px;"><b style="display: block;">WebSearch...</b></span>
-				</div>
-			</div>
-		</div>
-		<div class="lastreq color_muted"><span id="lastreq1"></span><span id="lastreq1lp"></span></div>
-		</div>
+            <div id="actionmenu" class="flex" style="margin-top: 3px;">
+                <div id="actionmenuitems">
+                    <button type="button" class="btn actbtn btn-primary mainnav" id="btn_actmem" onclick="btn_memory()">上下文</button>
+                    <button type="button" class="btn actbtn btn-primary mainnav" id="btn_actundo" onpointerdown="btn_back_longpress_start()" onpointerleave="btn_back_longpress_end()" onpointerup="btn_back_longpress_end()" onclick="btn_back()">撤销</button>
+                    <button type="button" class="btn actbtn btn-primary mainnav" id="btn_actredo" onpointerdown="btn_redo_longpress_start()" onpointerleave="btn_redo_longpress_end()" onpointerup="btn_redo_longpress_end()" onclick="btn_redo()">重做</button>
+                    <button type="button" class="btn actbtn btn-primary mainnav" id="btn_actretry" onclick="btn_retry()">重试</button>
+                    <button type="button" class="btn actbtn btn-primary mainnav" id="btn_actbranch" onclick="btn_branch(this)">分支</button>
+                    <button type="button" class="btn actbtn btn-primary mainnav" id="btn_addmedia" onclick="add_media_btn_menu()">添加文件</button>
+                    <button type="button" class="btn actbtn btn-primary mainnav slim btnicon-websearch hidden" id="btn_togglesearch" onclick="toggle_websearch()">&nbsp;</button>
+                </div>
+                <div class="borderbox flex push-right">
+                    <input type="checkbox" id="allowediting" class="mainnav" onclick="toggle_editable()">
+                    <div class="box-label"><label for="allowediting">允许编辑</label></div>
+                </div>
+            </div>
+            <div>
+                <div id="inputrow">
+                    <div style="position: relative; padding-right: 4px;">
+                        <button title="切换冒险模式" type="button" class="btn btn-primary hidden mainnav" style="line-height: 1.2; padding: 2px 6px;" id="btnmode_adventure" onclick="btn_adventure_mode()">
+                            <img id="adventure_mode_img" class="input_story">
+                            <br><b id="adventure_mode_txt" style="font-size: 10px;">故事</b>
+                        </button>
+                        <button title="显示群聊选择" type="button" class="btn btn-primary mainnav actbtnbtm" style="line-height: 1.2; padding: 2px 6px;" id="btnmode_chat" onclick="show_groupchat_select()">
+                            <img class="input_chat">
+                            <br><b style="font-size: 10px;">群组</b>
+                        </button>
+                    </div>
+                    <div id="input_text_holder" style="position: relative; padding-right: 4px;">
+                        <textarea title="用户输入" style="min-height: 46px; height: 80px;" class="form-control menuinput_multiline mainnav actbtnbtm" id="input_text" oninput="update_submit_button()" onkeypress="return handle_typing(event)" onpaste="return img_paste_event(event)" placeholder="在此输入文本"></textarea>
+                        <span id="token-budget" class="token-budget"></span>
+                    </div>
+                    <div style="position: relative; padding-right: 2px;">
+                        <button type="button" class="btn btn-primary wait mainnav actbtnbtm" id="btnsend" disabled
+                            onclick="submit_generation_button(false)" onpointerdown="ptt_start()" onpointerup="ptt_end()">加载中</button>
+                        <a href="#" id="abortgen" class="hidden bg_black mainnav" style="text-align: center;color: #ffaaaa;" onclick="abort_generation()"><b style="display: block;">[中止]</b></a>
+                        <span id="searchingtxt" class="hidden bg_black mainnav" style="text-align: center;color: #49a8e4; font-size: 9px;"><b style="display: block;">网络搜索中...</b></span>
+                    </div>
+                </div>
+            </div>
+            <div class="lastreq color_muted"><span id="lastreq1"></span><span id="lastreq1lp"></span></div>
+        </div>
 
-		<div id="enhancedchatinterface" class="chat_mesgs hidden">
-			<div id="enhancedchatinterface_inner" class="chat_mesgs_inner pagebox">
-				<div id="chat_msg_body" class="chat_msg_history viewport_height"></div>
-				<div class="hidden" id="chatistyping" style="text-align:right;font-size:13px;color:#999999; padding-bottom: 3px;"><div style="padding-bottom: 2px;" id="chataityping">The AI is typing...</div><div style="padding-top:2px;text-align:right;" class="dot-flashing flex push-right"></div></div>
+        <div id="enhancedchatinterface" class="chat_mesgs hidden">
+            <div id="enhancedchatinterface_inner" class="chat_mesgs_inner pagebox">
+                <div id="chat_msg_body" class="chat_msg_history viewport_height"></div>
+                <div class="hidden" id="chatistyping" style="text-align:right;font-size:13px;color:#999999; padding-bottom: 3px;"><div style="padding-bottom: 2px;" id="chataityping">AI 正在输入...</div><div style="padding-top:2px;text-align:right;" class="dot-flashing flex push-right"></div></div>
 
-				<!-- A greatly simplified action menu for this mode -->
-				<div class="flex hidden" id="actionmenu2">
-					<div id="actionmenuitems2" class="borderbox push-right" style="margin-bottom: 2px;">
-						<button type="button" class="btn actbtn btn-primary mainnav" id="btn_actmem2" onclick="btn_memory()">Context</button>
-						<button type="button" class="btn actbtn btn-primary mainnav" id="btn_actundo2" onpointerdown="btn_back_longpress_start()" onpointerleave="btn_back_longpress_end()" onpointerup="btn_back_longpress_end()" onclick="btn_back()">Undo</button>
-						<button type="button" class="btn actbtn btn-primary mainnav" id="btn_actredo2" onpointerdown="btn_redo_longpress_start()" onpointerleave="btn_redo_longpress_end()" onpointerup="btn_redo_longpress_end()" onclick="btn_redo()">Redo</button>
-						<button type="button" class="btn actbtn btn-primary mainnav" id="btn_actretry2" onclick="btn_retry()">Retry</button>
-						<button type="button" class="btn actbtn btn-primary mainnav" id="btn_actbranch2" onclick="btn_branch(this)">Branch</button>
-						<button type="button" class="btn actbtn btn-primary mainnav" id="btn_addmedia2" onclick="add_media_btn_menu()">Add File</button>
-						<button type="button" class="btn actbtn btn-primary mainnav slim btnicon-websearch hidden" id="btn_togglesearch2" onclick="toggle_websearch()">&nbsp;</button>
-						<button type="button" class="btn actbtn btn-primary mainnav" id="btn_editmode" onclick="btn_editmode()">Edit</button>
-					</div>
-				</div>
+                <!-- 简化的操作菜单 (聊天模式) -->
+                <div class="flex hidden" id="actionmenu2">
+                    <div id="actionmenuitems2" class="borderbox push-right" style="margin-bottom: 2px;">
+                        <button type="button" class="btn actbtn btn-primary mainnav" id="btn_actmem2" onclick="btn_memory()">上下文</button>
+                        <button type="button" class="btn actbtn btn-primary mainnav" id="btn_actundo2" onpointerdown="btn_back_longpress_start()" onpointerleave="btn_back_longpress_end()" onpointerup="btn_back_longpress_end()" onclick="btn_back()">撤销</button>
+                        <button type="button" class="btn actbtn btn-primary mainnav" id="btn_actredo2" onpointerdown="btn_redo_longpress_start()" onpointerleave="btn_redo_longpress_end()" onpointerup="btn_redo_longpress_end()" onclick="btn_redo()">重做</button>
+                        <button type="button" class="btn actbtn btn-primary mainnav" id="btn_actretry2" onclick="btn_retry()">重试</button>
+                        <button type="button" class="btn actbtn btn-primary mainnav" id="btn_actbranch2" onclick="btn_branch(this)">分支</button>
+                        <button type="button" class="btn actbtn btn-primary mainnav" id="btn_addmedia2" onclick="add_media_btn_menu()">添加文件</button>
+                        <button type="button" class="btn actbtn btn-primary mainnav slim btnicon-websearch hidden" id="btn_togglesearch2" onclick="toggle_websearch()">&nbsp;</button>
+                        <button type="button" class="btn actbtn btn-primary mainnav" id="btn_editmode" onclick="btn_editmode()">编辑</button>
+                    </div>
+                </div>
 
-				<div class="cht_inp_hold_outer">
-					<div class="cht_inp_hold">
-					<button title="Show Groupchat Selection" onclick="show_groupchat_select()" id="chat_btnmode_chat" class="chat_btnmode_chat hidden mainnav" type="button"></button>
-					<button title="Toggle Adventure Mode" onclick="btn_adventure_mode()" id="chat_btnmode_adventure" class="chat_btnmode_adventure actionmode hidden mainnav" type="button"></button>
-					<div id="cht_inp_bg" class="cht_inp_bg">
-					<div class="cht_inp_bg_inner" id="cht_inp_lengthtester" style="white-space: nowrap; visibility: hidden; height: 0px; position:absolute; width: auto;"></div>
-					<textarea title="User Input" class="cht_inp_bg_inner mainnav" id="cht_inp" name="chtchtinp"  role="presentation" autocomplete="noppynop" spellcheck="true" rows="1" wrap="on" placeholder="Type a message" oninput="update_submit_button();chat_resize_input();" onpaste="return img_paste_event(event)" onkeypress="return chat_handle_typing(event)"></textarea>
-					</div>
-					<button title="Submit" onclick="submit_generation_button(true)" onmousedown="ptt_start()" onmouseup="ptt_end()" id="chat_msg_send_btn" class="chat_msg_send_btn mainnav" type="button"></button>
-					<button title="Abort" onclick="abort_generation()" id="chat_msg_send_btn_abort" class="hidden chat_msg_send_btn_abort mainnav" type="button"></button>
-					<button title="Toggle Action Menu" type="button" class="chat_msg_cust_btn mainnav" id="btn_chat_cust" onclick="chat_toggle_actionmenu()"></button>
-					</div>
-				</div>
+                <div class="cht_inp_hold_outer">
+                    <div class="cht_inp_hold">
+                        <button title="显示群聊选择" onclick="show_groupchat_select()" id="chat_btnmode_chat" class="chat_btnmode_chat hidden mainnav" type="button"></button>
+                        <button title="切换冒险模式" onclick="btn_adventure_mode()" id="chat_btnmode_adventure" class="chat_btnmode_adventure actionmode hidden mainnav" type="button"></button>
+                        <div id="cht_inp_bg" class="cht_inp_bg">
+                            <div class="cht_inp_bg_inner" id="cht_inp_lengthtester" style="white-space: nowrap; visibility: hidden; height: 0px; position:absolute; width: auto;"></div>
+                            <textarea title="用户输入" class="cht_inp_bg_inner mainnav" id="cht_inp" name="chtchtinp"  role="presentation" autocomplete="noppynop" spellcheck="true" rows="1" wrap="on" placeholder="输入消息" oninput="update_submit_button();chat_resize_input();" onpaste="return img_paste_event(event)" onkeypress="return chat_handle_typing(event)"></textarea>
+                        </div>
+                        <button title="提交" onclick="submit_generation_button(true)" onmousedown="ptt_start()" onmouseup="ptt_end()" id="chat_msg_send_btn" class="chat_msg_send_btn mainnav" type="button"></button>
+                        <button title="中止" onclick="abort_generation()" id="chat_msg_send_btn_abort" class="hidden chat_msg_send_btn_abort mainnav" type="button"></button>
+                        <button title="切换操作菜单" type="button" class="chat_msg_cust_btn mainnav" id="btn_chat_cust" onclick="chat_toggle_actionmenu()"></button>
+                    </div>
+                </div>
+                <div class="lastreq color_footer"><span id="lastreq2"></span><span id="lastreq2lp"></span></div>
+            </div>
+        </div>
 
-				<div class="lastreq color_footer"><span id="lastreq2"></span><span id="lastreq2lp"></span></div>
-			</div>
-		</div>
-
-		<button title="Exit Edit Mode" id="corpoendedit" class="corpoendeditbutton hidden" onclick="exit_editmode()">X</button>
-		<div id="corpointerface" class="hidden">
-			<div class="corpostyle">
-				<div id="corpo_leftpanel" class="corpoleftpanel">
-					<button title="Hide Corpo Side Panel" class="corpo_leftpanel_close mainnav" onclick="show_corpo_leftpanel(false)">&times;</button>
-					<div id="corpoleftpanelitems" class="corpoleftpanelitems">
-					<div class="corpoleftpanelitemstopper" id="corpoleftpanelitemstopper"></div>
-					<div style="padding:2px;font-size:14px;margin-left:8px;font-weight:600;line-height:1.1;margin-top:12px">Quick Slot Load</div>
-					<hr style="margin-top:4px;margin-bottom:6px" />
-					<div class="corpoleftpanelitemsinner" id="corpoleftpanelitemsinner"></div>
-					<div style="margin-top: auto; margin-bottom:2px; width: 230px; display:flex">
-					<div><button onclick="quicksave()" class="corpo_leftpanel_btn" type="button" style="width:110px;padding-left: 28px;display:inline-block;background-image: var(--img_save_mono);">Save</button></div>
-					<div><button onclick="quickdelete()" class="corpo_leftpanel_btn" type="button" style="width:110px;padding-left: 28px;display:inline-block;background-image: var(--img_delete_mono);">Delete</button></div>
-					</div>
-					</div>
-				</div>
-				<button title="Show Corpo Side Panel" class="corpo_leftpanel_open mainnav" onclick="show_corpo_leftpanel(true)"><div class="corpo_arrow_right"></div></button>
-				<div id="corporightpanel" class="corporightpanel">
-					<div style="height:100%" id="corpo_welcome"></div>
-					<div id="corpostylemain" class="corpostylemain">
-						<div id="corpo_body" class="corpostyleinner"></div>
-					</div>
-					<div class="corpomainbtm">
-						<div class="corpo_chat_outer">
-							<button title="More" onclick="toggle_corpo_plusmenu(true)" id="corpo_chat_img_btn" class="corpo_chat_img_btn mainnav" type="button"></button>
-							<div class="corpoplusmenu" id="corpoplusmenu">
-								<button type="button" id="btn_actmem3" onclick="toggle_corpo_plusmenu(false);btn_memory()">Context</button>
-								<button type="button" id="btn_actundo3" onpointerdown="btn_back_longpress_start()" onpointerleave="btn_back_longpress_end()" onpointerup="btn_back_longpress_end()" onclick="toggle_corpo_plusmenu(false);btn_back()">Undo</button>
-								<button type="button" id="btn_actredo3" onpointerdown="btn_redo_longpress_start()" onpointerleave="btn_redo_longpress_end()" onpointerup="btn_redo_longpress_end()" onclick="toggle_corpo_plusmenu(false);btn_redo()">Redo</button>
-								<button type="button" id="btn_actretry3" onclick="toggle_corpo_plusmenu(false);btn_retry()">Retry</button>
-								<button type="button" id="btn_actbranch3" onclick="btn_branch(this)">Branch</button>
-								<button type="button" id="btn_addmedia3" onclick="toggle_corpo_plusmenu(false);add_media_btn_menu()">Add File</button>
-							</div>
-							<div class="corpo_chat_inner" id="corpo_cht_inp_lengthtester" style="white-space: nowrap; visibility: hidden; height: 0px; position:absolute; width: auto;"></div>
-							<textarea title="User Input" class="corpo_chat_inner mainnav" id="corpo_cht_inp" name="crpchtinp"  role="presentation" autocomplete="noppynop" spellcheck="true" rows="1" wrap="on" placeholder="Message KoboldAI" oninput="update_submit_button();chat_resize_input();" onpaste="return img_paste_event(event)" onkeypress="return chat_handle_typing(event)"></textarea>
-							<button title="Submit" onclick="submit_generation_button(true)" id="corpo_chat_send_btn" class="corpo_chat_send_btn mainnav" type="button"></button>
-							<button title="Abort" onclick="abort_generation()" id="corpo_chat_send_btn_abort" class="hidden corpo_chat_send_btn_abort mainnav" type="button"></button>
-						</div>
-						<div class="corpolastreq color_muted"><span id="lastreq3"></span><span id="lastreq3lp"></span></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <button title="退出编辑模式" id="corpoendedit" class="corpoendeditbutton hidden" onclick="exit_editmode()">X</button>
+        <div id="corpointerface" class="hidden">
+            <div class="corpostyle">
+                <div id="corpo_leftpanel" class="corpoleftpanel">
+                    <button title="隐藏企业侧面板" class="corpo_leftpanel_close mainnav" onclick="show_corpo_leftpanel(false)">&times;</button>
+                    <div id="corpoleftpanelitems" class="corpoleftpanelitems">
+                        <div class="corpoleftpanelitemstopper" id="corpoleftpanelitemstopper"></div>
+                        <div style="padding:2px;font-size:14px;margin-left:8px;font-weight:600;line-height:1.1;margin-top:12px">快速加载槽</div>
+                        <hr style="margin-top:4px;margin-bottom:6px" />
+                        <div class="corpoleftpanelitemsinner" id="corpoleftpanelitemsinner"></div>
+                        <div style="margin-top: auto; margin-bottom:2px; width: 230px; display:flex">
+                            <div><button onclick="quicksave()" class="corpo_leftpanel_btn" type="button" style="width:110px;padding-left: 28px;display:inline-block;background-image: var(--img_save_mono);">保存</button></div>
+                            <div><button onclick="quickdelete()" class="corpo_leftpanel_btn" type="button" style="width:110px;padding-left: 28px;display:inline-block;background-image: var(--img_delete_mono);">删除</button></div>
+                        </div>
+                    </div>
+                </div>
+                <button title="显示企业侧面板" class="corpo_leftpanel_open mainnav" onclick="show_corpo_leftpanel(true)"><div class="corpo_arrow_right"></div></button>
+                <div id="corporightpanel" class="corporightpanel">
+                    <div style="height:100%" id="corpo_welcome"></div>
+                    <div id="corpostylemain" class="corpostylemain">
+                        <div id="corpo_body" class="corpostyleinner"></div>
+                    </div>
+                    <div class="corpomainbtm">
+                        <div class="corpo_chat_outer">
+                            <button title="更多" onclick="toggle_corpo_plusmenu(true)" id="corpo_chat_img_btn" class="corpo_chat_img_btn mainnav" type="button"></button>
+                            <div class="corpoplusmenu" id="corpoplusmenu">
+                                <button type="button" id="btn_actmem3" onclick="toggle_corpo_plusmenu(false);btn_memory()">上下文</button>
+                                <button type="button" id="btn_actundo3" onpointerdown="btn_back_longpress_start()" onpointerleave="btn_back_longpress_end()" onpointerup="btn_back_longpress_end()" onclick="toggle_corpo_plusmenu(false);btn_back()">撤销</button>
+                                <button type="button" id="btn_actredo3" onpointerdown="btn_redo_longpress_start()" onpointerleave="btn_redo_longpress_end()" onpointerup="btn_redo_longpress_end()" onclick="toggle_corpo_plusmenu(false);btn_redo()">重做</button>
+                                <button type="button" id="btn_actretry3" onclick="toggle_corpo_plusmenu(false);btn_retry()">重试</button>
+                                <button type="button" id="btn_actbranch3" onclick="btn_branch(this)">分支</button>
+                                <button type="button" id="btn_addmedia3" onclick="toggle_corpo_plusmenu(false);add_media_btn_menu()">添加文件</button>
+                            </div>
+                            <div class="corpo_chat_inner" id="corpo_cht_inp_lengthtester" style="white-space: nowrap; visibility: hidden; height: 0px; position:absolute; width: auto;"></div>
+                            <textarea title="用户输入" class="corpo_chat_inner mainnav" id="corpo_cht_inp" name="crpchtinp"  role="presentation" autocomplete="noppynop" spellcheck="true" rows="1" wrap="on" placeholder="向 KoboldAI 发消息" oninput="update_submit_button();chat_resize_input();" onpaste="return img_paste_event(event)" onkeypress="return chat_handle_typing(event)"></textarea>
+                            <button title="提交" onclick="submit_generation_button(true)" id="corpo_chat_send_btn" class="corpo_chat_send_btn mainnav" type="button"></button>
+                            <button title="中止" onclick="abort_generation()" id="corpo_chat_send_btn_abort" class="hidden corpo_chat_send_btn_abort mainnav" type="button"></button>
+                        </div>
+                        <div class="corpolastreq color_muted"><span id="lastreq3"></span><span id="lastreq3lp"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 	<div class="branchmenu" id="branchmenu">
 	</div>
