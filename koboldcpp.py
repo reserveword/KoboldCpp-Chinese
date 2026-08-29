@@ -731,7 +731,7 @@ class MCPStdioClient:
                     self._pending[msg_id] = response_q
                 with self.lock:
                     if self.process.stdin.closed:
-                        raise RuntimeError("MCP server stdin is closed")
+                        raise RuntimeError("MCP 服务器标准输入已关闭")
                     self.process.stdin.write(line + "\n")
                     self.process.stdin.flush()
         except Exception:
@@ -745,20 +745,20 @@ class MCPStdioClient:
         try:
             response = response_q.get(timeout=180)
         except queue.Empty:
-            raise RuntimeError("MCP server timed out (no response in 180s)")
+            raise RuntimeError("MCP 服务器超时（180 秒内无响应）")
         finally:
             with self._pending_lock:
                 self._pending.pop(msg_id, None)
         if response is None:
             errmsg = "\n".join(self.stderr_buffer[-10:])
             print(f"[MCP Server Error!]\n{errmsg}")
-            raise RuntimeError("MCP server closed stdout")
+            raise RuntimeError("MCP 服务器标准输出已关闭")
         return response
     def notify(self, message: dict) -> None: # Send JSON-RPC notification (no response expected).
         line = json.dumps(message)
         with self.lock:
             if self.process.stdin.closed:
-                raise RuntimeError("MCP server stdin is closed")
+                raise RuntimeError("MCP 服务器标准输入已关闭")
             self.process.stdin.write(line + "\n")
             self.process.stdin.flush()
     def terminate(self):

@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>KoboldCpp API Documentation</title>
+   <title>KoboldCpp API 文档</title>
 
    <!-- schema -->
    <script>
@@ -474,7 +474,7 @@
              },
              "info": {
                 "title": "KoboldCpp API",
-                "description": "For swagger.json, <a href=\"?json=1\">click here</a> or use <a href=\"https://lite.koboldai.net/koboldcpp_api.json\">online version</a>.",
+                "description": "要获取 swagger.json，<a href=\"?json=1\">点击这里</a> 或使用 <a href=\"https://lite.koboldai.net/koboldcpp_api.json\">在线版本</a>。",
                 "version": "2025.06.03"
              },
              "openapi": "3.0.3",
@@ -1437,7 +1437,7 @@
                                      },
                                      "langcode": {
                                         "type": "string",
-                                        "description": "Two letter language code, or use auto to autodetect."
+                                        "description": "两位字母语言代码，或使用 auto 自动检测。"
                                      },
                                      "suppress_non_speech": {
                                         "type": "boolean",

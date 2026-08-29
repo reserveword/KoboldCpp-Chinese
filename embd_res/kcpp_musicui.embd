@@ -188,38 +188,38 @@ select{
 
 <header>
 <img style="width: 36px; height: 36px; vertical-align: middle; margin-right:4px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAADxQTFRFS2Si+X5+pmBfHyApLjZSS2SjP057Vzw5EA4Sf1ZT+9Sv1WpqnYx/7qaYw7vUAAAAS2Sj9PPzgnrLS2SjAzrF9gAAABR0Uk5T///////w////////////AKj//yMlHqVpAAAD3klEQVR4nKWXi7KjIAyGFSgxEjhV3/9d90+8onZPd810prWSDwi50fyoTNP7/X79g2D4NJlqo+rvV/Mf8npPM2B6/4+6ihKaB/pGaH4e6IPw00y3+48xhBC3J32Id+NeUzN9UPfer4RoD/eIqbnuwLS7zncLAfqdPvvDmvY9XAE6vuuImEAw8fNT1/kr4Qqw+YhdIocfJl0glxyTvyG8m7MNY1B9diAkmgGUODnH7Km7AF53AGEjUJtWYdUPzn0LyC6AQO0qCUCi1PKXAM5tCwXeAC0ROf36AqA2VACmbQ8yP9DVimeA6lPKkLaW3EPylXAARBXV701OhOVPI6hcAXH1mTyP7e8AMyEc4mQDzP7XrfOfl5D7ndAdfXID6NwMyXACEpEbgPTCLJn1hEGoAep/OKheQiCEEhj1HgBQX1ZxQMPLlyVsABwejkp8EGEQAkxRA4RgIRYhTxme1fkKoBZwAHjLA+b/cgLQ8gZ4gZ+tVtgAnboaa+Lg0IwRhBqAmX0cI0WFqHN3FUAXAOPpzIWhPzZYQgUAu4ljiaKTaKwtZtwAIdv8XkocR9+UYM5/BMTRxzJKsWEu+RPAAsBxKSWWgTHS18cofiwhlCJD4cApUb0CNWKA/5dhwAqKD2UIXAEoFgUMkIJTCCcjzkGE890BQhXA685WQNqD6ujKWDRhhI7EdKUCtKSGxd8ASEr+6sqNApKPeD/iFEpT6nAUcAMgMmBzqwVPgJCd80X3AIlDDcjSzH8PJbD7AGiT020WjfcCN0jI5WwJGk5axP4eikeyvQd4HE5i7I4xEpWANKg0m2p0OUIcQKJnd7uCaABMRebOSOoB1WUVYACzaGSs012NaI5gAC0GcPWD9iLI6/qVdGeXY7R6xu1M0FAhG7s865ctw97Zoz85kuXi5T2EbaZatLileQA+VifrYGrT7ruL+lbZ0orYcXQJpry/tl+26l1s8sOy+BxMqKjr23nf7mhFnktbOgJOGQmnVG0ZVve06VvDUFmEztGIhHAy2YHA+qsCuFNS1T0Edf41AOZ1b7uwH1tYYFA4p3U1owiOOu+AsyxrQ3AIXwrLXtryL4BPpW0rrvMaPgHSx+K6l3cj3Oin1lH6S3nfd+KDa51lAjJhE6ddz7XRu29xUH51O95SgNOahDTB3PPvLc7cZPWYEVlVlp5AkGtJK/63XZoq0jBsvUrPeNDvr/tE1SnD3qxIEVuNfAsY0J9w4Ux2ZKizHPLHFdw127r7HIS2ZpvFTHHbbN+3+2Qm29p9NvXv2v3twkHHCwd9vnA8vvI8vnQ9vvY9v3g+vvo+v3w/u/7/AZoAPJwrbZ1IAAAAAElFTkSuQmCC"/>
-<span>KoboldCpp Music and Audio Generation</span></header>
+<span>KoboldCpp 音乐与音频生成</span></header>
 
 <div class="wrapper">
 
 <div class="panel">
 <div style="display:flex; gap:8px; margin-bottom:10px;">
-  <button class="secondary" onclick="switchTab('music')" id="tab_music">🎵 Create Music</button>
-  <button class="secondary" onclick="switchTab('tts')" id="tab_tts">🗣 Create TTS</button>
+  <button class="secondary" onclick="switchTab('music')" id="tab_music">🎵 创建音乐</button>
+  <button class="secondary" onclick="switchTab('tts')" id="tab_tts">🗣 创建 TTS</button>
 </div>
 <div id="musicTab">
-  <h2>Song Setup</h2>
+  <h2>歌曲设置</h2>
 
-  <label>Caption</label> <div style="float:right"><input title="Rewrite Caption" id="rewrite_caption" type="checkbox" style="width: auto;vertical-align: middle;" checked><label>Rewrite Caption</label></div>
+  <label>标题</label> <div style="float:right"><input title="Rewrite Caption" id="rewrite_caption" type="checkbox" style="width: auto;vertical-align: middle;" checked><label>Rewrite Caption</label></div>
 
-  <input id="caption" placeholder="Describe the song">
+  <input id="caption" placeholder="描述这首歌">
 
   <div style="margin-top:10px">
-    <label>Lyrics</label>
-    <textarea id="lyrics" placeholder="Enter song lyrics, or press 'Plan' to generate them."></textarea>
+    <label>歌词</label>
+    <textarea id="lyrics" placeholder="输入歌曲歌词，或者按“规划”生成。"></textarea>
   </div>
 
   <div class="form-grid" style="margin-top:12px">
-    <div><label>BPM</label><input title="BPM" id="bpm" type="number"></div>
-    <div><label>Duration</label><input title="Duration" id="duration" type="number"></div>
-    <div><label>Key</label><input title="Keyscale" id="keyscale"></div>
-    <div><label>Time Sig</label><input title="Time Signature" id="timesignature"></div>
-    <div><label>Language</label><input title="Vocal Language" id="vocal_language"></div>
+    <div><label>速度（BPM）</label><input title="BPM" id="bpm" type="number"></div>
+    <div><label>时长</label><input title="时长" id="duration" type="number"></div>
+    <div><label>键位</label><input title="键位缩放" id="keyscale"></div>
+    <div><label>拍号</label><input title="拍号" id="timesignature"></div>
+    <div><label>语言</label><input title="演唱语言" id="vocal_language"></div>
     <div>
-      <label>Seed</label>
+      <label>种子</label>
       <div style="display:flex; gap:6px;">
-        <input id="seed" title="Seed" type="number" style="flex:1;">
-        <button type="button" title="Randomize Seed" class="secondary" onclick="randomizeSeed()">🎲</button>
+        <input id="seed" title="种子" type="number" style="flex:1;">
+        <button type="button" title="随机种子" class="secondary" onclick="randomizeSeed()">🎲</button>
       </div>
     </div>
   </div>
@@ -270,32 +270,32 @@ select{
 
   <div class="actions" id="actionContainer">
     <div id="normalActions" style="display:flex; gap:10px; flex-wrap:wrap;">
-      <button class="primary" onclick="planSong()">Plan</button>
-      <button class="primary" onclick="generateSong()">Generate</button>
-      <button class="danger" onclick="clearFields()">Clear</button>
-      <button onclick="exportPlan()">Export JSON</button>
-      <button onclick="document.getElementById('importFile').click()">Import JSON</button>
+      <button class="primary" onclick="planSong()">规划</button>
+      <button class="primary" onclick="generateSong()">生成</button>
+      <button class="danger" onclick="clearFields()">清除</button>
+      <button onclick="exportPlan()">导出 JSON</button>
+      <button onclick="document.getElementById('importFile').click()">导入 JSON</button>
     </div>
 
-    <button id="abortBtn" class="danger hidden" onclick="abortRequest()">Abort</button>
+    <button id="abortBtn" class="danger hidden" onclick="abortRequest()">中止</button>
     <div title="Please Wait, Generation In Progress" id="inlineSpinner" class="inline-spinner hidden"></div>
 
     <input title="Import Plan" type="file" id="importFile" hidden accept="application/json" onchange="importPlan(event)">
   </div>
   <div>
-  <p style="font-size:14px">Click 'Plan' first to generate lyrics, BPM and duration. Edit as needed.
-  <br>When satisfied, click 'Generate' to make the music</p>
+  <p style="font-size:14px">请先点击“规划”生成歌词、BPM 和时长。按需修改。
+  <br>当满意后，点击“生成”开始创作音乐</p>
   </div>
 </div>
 <div id="ttsTab" class="hidden">
 
-  <h2>TTS Generation</h2>
+  <h2>TTS 生成</h2>
 
-  <label>Text</label>
+  <label>文本</label>
   <textarea id="tts_input" placeholder="Enter text to speak using TTS..."></textarea>
 
   <div style="margin-top:10px">
-    <label>Voice</label>
+    <label>音色</label>
     <div style="display:flex; gap:6px;">
       <select id="tts_voice" style="flex:1;"></select>
       <button title="Fetch Voices" class="secondary" onclick="fetchVoices()">↻</button>
@@ -303,12 +303,12 @@ select{
   </div>
 
   <div style="margin-top:10px">
-    <label>Instruction (optional)</label>
+    <label>指令（可选）</label>
     <input title="TTS Instruction" id="tts_instruction" placeholder="e.g. angry shouting loud male">
   </div>
 
   <div style="margin-top:10px">
-    <label>Save as MP3</label>
+    <label>另存为 MP3</label>
     <input title="Save as MP3" id="tts_use_mp3" type="checkbox" style="max-width:30px">
   </div>
 
@@ -322,13 +322,13 @@ select{
   </div>
 
   <div id="ttsActions" class="actions">
-    <button class="primary" onclick="generateTTS()">Generate Speech</button>
-    <button class="danger" onclick="clearTTS()">Clear</button>
+    <button class="primary" onclick="generateTTS()">生成语音</button>
+    <button class="danger" onclick="clearTTS()">清除</button>
   </div>
   <div title="Please Wait, Generation In Progress" id="inlineSpinner2" class="inline-spinner hidden"></div>
 
   <p style="font-size:14px;margin-top:10px">
-    Generate speech clips and store them in your library.
+    生成语音片段并保存到你的库中。
   </p>
 
 </div>
@@ -336,7 +336,7 @@ select{
 </div>
 
 <div class="panel">
-  <h2>Your Library</h2>
+  <h2>你的库</h2>
   <div id="library" class="library-grid"></div>
   <div class="pagination">
     <button onclick="prevPage()">Prev</button>
